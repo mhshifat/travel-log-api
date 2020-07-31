@@ -1,0 +1,29 @@
+type Query {
+	logs: [Log!]!
+}
+
+type Mutation {
+	createLog(input: CreateLogInput!): Log!
+}
+
+type Log {
+	id: ID!
+	title: String!
+	description: String
+	visitedDate: String!
+	comments: [String!]!
+	image: String
+	latitude: String!
+	longitude: String!
+	rating: Int!
+	createdAt: String!
+}
+
+input CreateLogInput {
+	title: String!
+	description: String
+	visitedDate: String!
+	image: String
+	latitude: String!
+	longitude: String!
+}
